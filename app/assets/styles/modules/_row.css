@@ -15,7 +15,7 @@
 	}
 
 	&--gutters-large > div {
-		margin-right: 100px;
+		padding-right: 100px;
 	}
 		
 	&__b-margin-until-medium {
