@@ -54,10 +54,15 @@
 
 	var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
+	var _jquery = __webpack_require__(2);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobileMenu = new _MobileMenu2.default();
-	var revealOnScroll = new _RevealOnScroll2.default();
+	new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
+	new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
 
 /***/ },
 /* 1 */
@@ -10359,11 +10364,12 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var RevealOnScroll = function () {
-		function RevealOnScroll() {
+		function RevealOnScroll(els, offset) {
 			_classCallCheck(this, RevealOnScroll);
 
-			this.itemsToReveal = (0, _jquery2.default)(".feature-item");
+			this.itemsToReveal = els;
 			this.hideInitially();
+			this.offsetPercentage = offset;
 			this.createWayPoints();
 		}
 
@@ -10375,6 +10381,7 @@
 		}, {
 			key: 'createWayPoints',
 			value: function createWayPoints() {
+				var that = this;
 				this.itemsToReveal.each(function () {
 					var currentItem = this;
 					new Waypoint({
@@ -10382,7 +10389,7 @@
 						handler: function handler() {
 							(0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
 						},
-						offset: "85%"
+						offset: that.offsetPercentage
 					});
 				});
 			}
