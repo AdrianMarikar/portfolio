@@ -1335,7 +1335,7 @@ Instead edit gulp/templates/sprite .*/
 }
 
 .primary-nav a {
-  color: white;
+  color: #FFF;
   text-decoration: none;
   font-weight: 300;
   display: block;
@@ -1350,6 +1350,10 @@ Instead edit gulp/templates/sprite .*/
     font-size: 1rem;
     padding: 12px 0;
     background-color: transparent;
+  }
+
+  .primary-nav a.is-current-link {
+    color: #fabb69;
   }
 }
 
