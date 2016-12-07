@@ -1018,8 +1018,12 @@ a {
 Instead edit gulp/templates/sprite .*/
 
 .icon {
-	background-image: url('/assets/images/sprites/sprite-0f9283b3.svg');
-}
+		background-image: url('/assets/images/sprites/sprite-0f9283b3.svg');
+	}
+
+.no-svg .icon {
+		background-image: url('/assets/images/sprites/sprite-0f9283b3.png');
+	}
 
 .icon--clear-view-escapes {
 		width: 142.4px;
