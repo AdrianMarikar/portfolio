@@ -18,7 +18,7 @@ class StickyHeader {
 		this.lazyImages.load(function() {
 			Waypoint.refreshAll();
 		});
-	}	
+	}
 
 	addSmoothScrolling() {
 		this.headerLinks.smoothScroll();
