@@ -1176,8 +1176,8 @@ Instead edit gulp/templates/sprite .*/
   }
 
   .site-header--dark .site-header__logo {
-    -webkit-transform: scale(.56);
-            transform: scale(.56);
+    -webkit-transform: scale(.55);
+            transform: scale(.55);
   }
 }
 
